@@ -9,7 +9,7 @@ export class RecipeService{
   private recipes: Recipe[] = [
     new Recipe("Test",
                "Test Description",
-               "http://cdn.shopify.com/s/files/1/0572/5909/8282/articles/BBQ-Burger-Rezept-Burger-vom-Grill_nwm1yp_82e595d6-69ed-4094-8a06-95956e21c113.jpg?v=1630322701",
+               "https://cdn.pixabay.com/photo/2020/02/08/09/05/burger-4829526_1280.jpg",
                [
                  new Ingredient("Toast", 2),
                  new Ingredient("Tomate", 3)
@@ -17,7 +17,7 @@ export class RecipeService{
 
     new Recipe("Test2",
                "Test2 Description",
-               "http://cdn.shopify.com/s/files/1/0572/5909/8282/articles/BBQ-Burger-Rezept-Burger-vom-Grill_nwm1yp_82e595d6-69ed-4094-8a06-95956e21c113.jpg?v=1630322701",
+               "https://images.lecker.de/,id=1a3d59af,b=lecker,w=610,cg=c.jpg",
                [
                 new Ingredient("Brot", 2),
                 new Ingredient("Ei", 6)
@@ -29,6 +29,10 @@ export class RecipeService{
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number ){
+    return this.recipes[index];
   }
 
   addIngredientsToList(ingredients: Ingredient[]){
